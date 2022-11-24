@@ -1,36 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Code</title>
-    <style>
-        body{
-            margin: 0;
-            overflow: hidden;
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            *{padding:0;margin:0}
+            html{overflow:hidden}
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" style="background:#111"></canvas>
+        <script type="text/javascript">
+            
+            window.onload = function(){
+                var canvas = document.getElementById("canvas");
+                var context =canvas.getContext("2d");
+                var W = window.innerWidth;
+                var H = window.innerHeight;
+                canvas.width = W;
+                canvas.height = H;
+                var fontSize = 20;
+                var colunms = Math.floor(W /fontSize);
+                var drops = [];
+                for(var i=0;i<colunms;i++){
+                    drops.push(0);
+                }
 
-<body>
-<canvas id="myCanvas"></canvas>
-<script>
-    const width = document.getElementById("myCanvas").width = 1080;//screen.availWidth;
-    const height = document.getElementById("myCanvas").height = 1920;//screen.availHeight;
-    const ctx = document.getElementById("myCanvas").getContext("2d");
-    const arr = Array(Math.ceil(width / 10)).fill(0);
-    const str = "ABCDE联FGHIJ城KLMNOP联QRSTUVWXYZ0城123456789".split("");
+                var str ="ABCDEFGHIJ联城KLMNOPQRSTUVWXYZ0123456789";
+                //4:fillText(str,x,y);
+                function draw(){
+                    context.fillStyle = "rgba(0,0,0,0.05)";
+                    context.fillRect(0,0,W,H);
+                    context.font = "700 "+fontSize+"px  微软雅黑";
+                    context.fillStyle ="#00cc33";
+                    for(var i=0;i<colunms;i++){
+                        var index = Math.floor(Math.random() * str.length);
+                        var x = i*fontSize;
+                        var y = drops[i] *fontSize;
+                        context.fillText(str[index],x,y);
+                        if(y >= canvas.height && Math.random() > 0.99){
+                            drops[i] = 0;
+                        }
+                        drops[i]++;
+                    }
+                }
 
-function rain() {
-    ctx.fillStyle = "rgba(0,0,0,0.05)";
-    ctx.fillRect(0, 0, width, height);
-    ctx.fillStyle = "#0f0";
-    arr.forEach(function (value, index) {
-        ctx.fillText(str[Math.floor(Math.random() * str.length)], index * 10, value + 10);
-        arr[index] = value >= height || value > 8888 * Math.random() ? 0 : value + 20;
-    });
-}
+                function randColor(){
+                    var r = Math.floor(Math.random() * 256);
+                    var g = Math.floor(Math.random() * 256);
+                    var b = Math.floor(Math.random() * 256);
+                    return "rgb("+r+","+g+","+b+")";
+                }
 
-setInterval(rain, 50);
-</script>
-</body>
+                draw();
+                setInterval(draw,30);
+            };
+
+        </script>
+
+
+    </body>
 </html>
