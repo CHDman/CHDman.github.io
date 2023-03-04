@@ -169,5 +169,5 @@ http://192.168.0.1:8888/rtp/225.1.4.140:1176
 http://192.168.0.1:8888/rtp/225.1.4.141:1177
 #EXTINF:-1 tvg-id="" tvg-name="郑州文体" tvg-logo="" group-title="其他频道",郑州文体
 http://192.168.0.1:8888/rtp/225.1.4.142:1178
-#EXTINF:-1 tvg-id="53" tvg-name="" tvg-logo="https://raw.githubusercontent.com/CHDman/MyBlog/master/LOVE4K.png" group-title="其他频道",爱上4K
+#EXTINF:-1 tvg-id="53" tvg-name="" tvg-logo="https://chdman.github.io/LOVE4K.png" group-title="其他频道",爱上4K
 http://192.168.0.1:8888/rtp/225.1.4.162:1204
