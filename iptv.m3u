@@ -35,8 +35,6 @@ http://192.168.0.1:8888/rtp/225.1.4.113:1293
 http://192.168.0.1:8888/rtp/225.1.4.80:1109
 #EXTINF:-1 tvg-id="16" tvg-name="CCTV15" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV15.png" group-title="央视频道",CCTV-15音乐
 http://192.168.0.1:8888/rtp/225.1.4.216:1269
-#EXTINF:-1 tvg-id="16" tvg-name="CCTV16" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV16.png" group-title="央视频道",CCTV-16奥林匹克
-http://192.168.0.1:8888/rtp/225.1.5.46:1356
 #EXTINF:-1 tvg-id="17" tvg-name="CCTV17" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV17.png" group-title="央视频道",CCTV-17农业
 http://192.168.0.1:8888/rtp/225.1.4.226:2506
 #EXTINF:-1 tvg-id="18" tvg-name="湖南卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/hunan.png" group-title="卫视频道",湖南卫视高清
